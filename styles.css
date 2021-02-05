@@ -97,7 +97,8 @@ input{
     vertical-align: center;
     align-items: center;
     justify-content: center;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .subtitle{
@@ -173,7 +174,8 @@ input{
     background-color: #bfcbff;
     border-radius: 5px;
     justify-content: center;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
     margin-top: 20px;
 }
 #chatcontent{
@@ -222,6 +224,12 @@ input{
     display: none;
 }
 
+#currplayerstuff{
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
 #last-word-box{
     background-color: white;
     width: 20vw;
@@ -267,7 +275,8 @@ input{
     height: 30vh;
     max-height: 60vh;
     border-radius: 10px;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
     text-align: left;
 }
 
@@ -284,7 +293,8 @@ input{
     height: 175px;
     max-width: 100%;
     border-radius: 5px;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .playerLabel{
     width: 100%;
@@ -302,7 +312,8 @@ input{
     height: 65%;
     max-width: 90%;
     justify-content: center;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
     text-align: center;
 }
 

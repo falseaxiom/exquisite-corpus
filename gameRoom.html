@@ -21,7 +21,7 @@
                 <div id="chatcontent"></div>
             </div>
             <div class="flexRow" style="width: 90%; justify-content: space-between;">
-                <input type="text" id="chat-input" placeholder="chat here..." />
+                <input type="text" id="chat-input" placeholder="type here!" />
                 <button type="submit" id="send" onclick="messageAll()">send</button>
             </div>
         </div>
@@ -31,11 +31,14 @@
             <button type="button" id="start" onclick="startGame()">start game</button>
             <div id="gamestuff" class="locked">
                 <span class="subtitle" style="color: white; margin-top: 0px; margin-bottom: 0px;">round: <span id="roundnum">_</span> of 5</span>
-                <span class="subtitle" style="color: white; margin-top: 0px; margin-bottom: 10px;">current player: <span id="currplayer">_____</span></span>
-                <div id="last-word-box"><span class="desc"><span id="last-word">-----</span></span></div>
-                <textarea rows="5" id="passage" placeholder="type your masterpiece here!" onkeyup="countChar(this)"></textarea>
-                <div id="charCount">character count: <span id="charNum">0</span>/280</div>
-                <button type="button" id="done" onclick="nextPlayer()">done</button>
+                <span class="subtitle" style="color: white; margin-top: 0px; margin-bottom: 0px;">current player: <span id="currplayer">_____</span></span>
+                <div id="notyourturn" class="locked"></div>
+                <div id="currplayerstuff" class="flexCol">
+                    <div id="last-word-box"><span class="desc"><span id="last-word">-----</span></span></div>
+                    <textarea rows="5" id="passage" placeholder="type your masterpiece here!" onkeyup="countChar(this)"></textarea>
+                    <div id="charCount">character count: <span id="charNum">0</span>/280</div>
+                    <button type="button" id="done" onclick="nextPlayer()">done</button>
+                </div>
             </div>
             <div id="story" class="locked" style="align-items: center;">
                 <span class="subtitle" style="margin-top: 20px; margin-bottom: 10px;">your story:</span>
