@@ -1,1 +1,268 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+b{
+    font-weight: 600;
+}
 
+#container{
+    background-color: #8198ff;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+/* index */
+
+.title{
+    font-size: 2rem;
+    color: white;
+    padding: 10px 10px;
+}
+
+.desc{
+    width: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #375bff;
+}
+
+#login{
+    background-color: white;
+    width: 50vw;
+    height: 50vh;
+    margin: 10px;
+    border-radius: 10px;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 60%;
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #8198ff;
+    border-radius: 5px;
+    color: #375bff;
+    font-family: 'Roboto Mono', monospace;
+}
+::placeholder{
+    color: #bfcbff;
+}
+
+.submitButton{
+    font-size: 1.25rem;
+    padding: 5px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8198ff;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.incorrect{
+    border: 2px solid red;
+}
+.error{
+    color: red;
+    font-size: 0.75rem;
+}
+
+/* main */
+
+#whitebox{
+    padding: 0px;
+    width: 75vw;
+    height: 75vh;
+    background-color: white;
+    border-radius: 10px;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.subtitle{
+    color:  #8198ff;
+    font-size: 1.75rem;
+    margin-top: 30px;
+}
+
+#servers{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.serverButton{
+    font-size: 1.25rem;
+    padding: 5px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8198ff;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* gameRoom */
+
+#left{
+    background-color: white;
+    width: 20vw;
+    height: 96vh;
+    margin: 2vh;
+    border-radius: 10px;
+    align-items: center;
+}
+#middle{
+    flex: 2;
+    align-items: center;
+}
+#right{
+    background-color: white;
+    width: 20vw;
+    height: 96vh;
+    margin: 2vh;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#vid-controls{
+    width: 90%;
+    height: 50px;
+    justify-content: center;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#chatbox{
+    width: 90%;
+    height: 70%;
+    border: 2px solid #8198ff;
+    background-color: #bfcbff;
+    border-radius: 5px;
+}
+
+#start{
+    font-size: 2rem;
+    padding: 5px 15px;
+    margin-top: 10vh;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #8198ff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#gamestuff{
+    width: 100%;
+    align-items: center;
+}
+.locked{
+    display: none;
+}
+
+#last-word-box{
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#passage{
+    width: 80%;
+    height: 150px;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    border: 2px solid #8198ff;
+    border-radius: 5px;
+    color: #375bff;
+    font-family: 'Roboto Mono', monospace;
+    resize: none;
+}
+
+#charCount{
+    color: white;
+}
+
+#story{
+    background: white;
+    width: 80%;
+    height: 30vh;
+    max-height: 60vh;
+    border-radius: 10px;
+    overflow: scroll;
+    text-align: left;
+}
+
+.highlight{
+    background-color: white;
+}
+
+#SelfStream{
+    text-align: left;
+    margin: 0 auto;
+    justify-self: center;
+    border: 2px solid #8198ff;
+    width: 300px;
+    height: 175px;
+    max-width: 100%;
+    border-radius: 5px;
+    overflow: scroll;
+}
+.playerLabel{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #375bff;
+}
+
+#otherVidsContainer{
+    flex: 2;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    white-space: nowrap;
+    width: 304px;
+    height: 65%;
+    max-width: 90%;
+    justify-content: center;
+    overflow: scroll;
+    text-align: center;
+}
+
+#remoteStream{
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-self: center;
+    border: 2px solid #8198ff;
+    width: 300px;
+    height: 175px;
+    max-width: 100%;
+    border-radius: 5px;
+}

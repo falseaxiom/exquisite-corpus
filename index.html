@@ -1,1 +1,56 @@
+<html>
+    <head>
+        <title>ex•qui•site•cor•pus</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body class="flexCol" id="container">
+        <div class="title">
+            <span>ex•qui•site•cor•pus</span>
+        </div>
+        <form 
+            class="flexCol"
+            id="login"
+            action="/main.html"
+            onSubmit="return validate()"
+        >
+            <div class="desc"><span>write a funky little story with your friends. video chat enabled!</span></div>
+            <input type="submit" style="visibility: hidden;"/>
+            <input type="text" id="user" placeholder="username" name="user"/>
+            <span class="error" id="user-error"></span>
+            <input type="password" id="password" placeholder="password"/>
+            <span class="error" id="password-error"></span>
+            <button type="submit" class="submitButton" onclick="validate()">enter</button>
+        </form>
+    </body>
+    <script>
+        function validate(){
+            let user = document.getElementById("user");
+            let password = document.getElementById("password");
+            let userErr = document.getElementById("user-error");
+            let passErr = document.getElementById("password-error");
 
+            if (user.value != "") {
+                user.className = "";
+                userErr.innerHTML = "";
+                if (password.value >= 6) {
+                    password.className = "";
+                    passErr.innerHTML = "";
+                    return true;
+                } else {
+                    password.className = "incorrect";
+                    passErr.innerHTML = "password must be >=6 characters long";
+                    return false;
+                }
+            } else {
+
+                user.className = "incorrect";
+                userErr.innerHTML = "please enter a username";
+                password.className = "incorrect";
+                passErr.innerHTML = "password must be >=6 characters long";
+                return false;
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>ex•qui•site•cor•pus</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body id="container" class="flexCol">
+        <div class="title">
+            <span>welcome, <span id="user">_____</span>!</span>
+        </div>
+        <div class="flexCol" id="whitebox">
+            <div class="desc" style="width: 90%">
+                <div style="text-align:left">
+                    <span>ex•qui•site•cor•pus is based on an <a href="https://en.wikipedia.org/wiki/Exquisite_corpse" style="color: #8198ff;" target="_blank">old game</a> of a similar name. here are the rules:</span>
+                    <br/>
+                    <br/>
+                    <span>0. hop on one of the channels below.</span>
+                    <br/>
+                    <span>1. wait for everyone to join the same channel. when you're ready, press the "start game" button.</span>
+                    <br/>
+                    <span>2. when it's your turn, type whatever you want in the textbox! <span style="color: #bfcbff">(it'll only take 280 characters, though.)</span> once you've typed your masterpiece, press the "done" button.</span>
+                    <br/>
+                    <span>3. the next player does the same thing, but they won't be able to see anything the previous people have typed, save for the last word. <span style="color: #bfcbff">(for example, if you typed "i do not like green eggs and ham", the player after you will only see "ham".)</span></span>
+                    <br/>
+                    <span>4. repeat for 5 rounds.</span>
+                    <br/>
+                    <span>5. at the end of the game, the screen will display your story in its entirety. try giving each other a dramatic reading!</span>
+                    <br/>
+                    <span>***by the way, you'll have video, audio, and text chat capabilities the whole time :~)</span>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="desc">
+                pick a channel to begin:
+            </div>
+            <form class="flexCol" id="servers" action="/gameRoom.html">
+                <input id="pass-in-user" name="user" style="visibility: hidden; height: 0px; width: 0px;">
+                <div class="flexRow">
+                    <button type="submit" class="serverButton" name="channel" value="sargent">sargent</button>
+                    <button type="submit" class="serverButton" name="channel" value="gansey">gansey</button>
+                    <button type="submit" class="serverButton" name="channel" value="parrish">parrish</button>
+                    <button type="submit" class="serverButton" name="channel" value="lynch">lynch</button>
+                    <button type="submit" class="serverButton" name="channel" value="czerny">czerny</button>
+                    <button type="submit" class="serverButton" name="channel" value="cheng">cheng</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script>
+        let param = window.location.href.split('?');
+        let p = param[1].split("=");
+
+        // welcome message
+        document.getElementById(p[0]).innerHTML = decodeURIComponent(p[1]);
+
+        // pass on username to game room
+        document.getElementById("pass-in-user").value = decodeURIComponent(p[1]);
+    </script>
+</html>
