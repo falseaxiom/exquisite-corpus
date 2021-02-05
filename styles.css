@@ -97,8 +97,7 @@ input{
     vertical-align: center;
     align-items: center;
     justify-content: center;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: scroll;
 }
 
 .subtitle{
@@ -174,8 +173,7 @@ input{
     background-color: #bfcbff;
     border-radius: 5px;
     justify-content: center;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: scroll;
     margin-top: 20px;
 }
 #chatcontent{
@@ -275,8 +273,7 @@ input{
     height: 30vh;
     max-height: 60vh;
     border-radius: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: scroll;
     text-align: left;
 }
 
@@ -293,8 +290,6 @@ input{
     height: 175px;
     max-width: 100%;
     border-radius: 5px;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 .playerLabel{
     width: 100%;
@@ -312,8 +307,7 @@ input{
     height: 65%;
     max-width: 90%;
     justify-content: center;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: scroll;
     text-align: center;
 }
 
