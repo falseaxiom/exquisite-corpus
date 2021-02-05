@@ -77,6 +77,7 @@ function addPlayer(streamId){
     console.log();
     players.push(streamId);
     console.log(players);
+    players.sort();
 }
 
 function removeMyVideoStream(){
@@ -144,9 +145,11 @@ document.getElementById("video-mute").onclick = function() {
     if(!isVideoMuted){
         globalStream.muteVideo();
         isVideoMuted = true;
+        document.getElementById("video-mute").className = "iconMute";
     }else{
         globalStream.unmuteVideo();
         isVideoMuted = false;
+        document.getElementById("video-mute").className = "icon";
     }
 }
 
@@ -154,9 +157,11 @@ document.getElementById("audio-mute").onclick = function() {
     if(!isAudioMuted){
         globalStream.muteAudio();
         isAudioMuted = true;
+        document.getElementById("audio-mute").className = "iconMute";
     }else{
         globalStream.unmuteAudio();
         isAudioMuted = false;
+        document.getElementById("audio-mute").className = "icon";
     }
 }
 
@@ -167,7 +172,6 @@ function startGame() {
     document.getElementById("gamestuff").className = "flexCol";
     document.getElementById("start").className = "locked";
     
-    players.sort();
     currPlayer = players[currPlayerIndex];
     round = 1;
 
@@ -217,7 +221,6 @@ function nextPlayer() {
     currPlayer = players[currPlayerIndex];
     document.getElementById("currplayer").innerHTML = currPlayer;
 }
-
 
 
 
