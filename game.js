@@ -81,9 +81,11 @@ function nextPlayer() {
     }
     document.getElementById("currplayer").innerHTML = players[cpi];
 
-    // lock input
-    document.getElementById("currplayerstuff").className = "locked";
-    document.getElementById("notyourturn").className = "desc";
+    // if not playing solo, lock input
+    if (players.length != 1) {
+        document.getElementById("currplayerstuff").className = "locked";
+        document.getElementById("notyourturn").className = "desc";
+    }
 
     // send to everyone
     turnInfo = cpi + "###" + round + "###" + story + "###" + lastWord;
