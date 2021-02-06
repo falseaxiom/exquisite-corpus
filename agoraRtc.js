@@ -20,8 +20,9 @@ let round = 0;
 let cpi = 0;
 
 // live character counter
-function countChar(val) {
-    var len = val.value.length;
+function countChar() {
+    let val = document.getElementById("passage");
+    let len = val.value.length;
     if (len >= 10000) {
         val.value = val.value.substring(50, 10000);
     } else {

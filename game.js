@@ -59,6 +59,7 @@ function nextPlayer() {
     // change last word
     let playerInputArr = playerInput.split(" ");
     lastWord = playerInputArr[playerInputArr.length - 1];
+    document.getElementById("last-word").innerHTML = lastWord;
 
     // clear input box
     document.getElementById("passage").value = "";
