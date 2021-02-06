@@ -34,7 +34,7 @@
             if (user.value != "") {
                 user.className = "";
                 userErr.innerHTML = "";
-                if (password.length >= 6) {
+                if (password.value.length >= 6) {
                     password.className = "";
                     passErr.innerHTML = "";
                     return true;
