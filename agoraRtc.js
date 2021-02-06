@@ -15,8 +15,9 @@ players.push(userInfo[1]);
 
 // round and current player
 let round = 0;
-let currPlayer = "";
-let currPlayerIndex = 0;
+// let currPlayer = "";
+// let currPlayerIndex = 0;
+let cpi = 0;
 
 // live character counter
 function countChar(val) {
@@ -165,63 +166,58 @@ document.getElementById("audio-mute").onclick = function() {
     }
 }
 
+/*** game things (solo ver) ***/
 
-
-// game stuff (solo ver)
-function startGame() {
-    document.getElementById("gamestuff").className = "flexCol";
-    document.getElementById("start").className = "locked";
+// function startGame() {
+//     document.getElementById("gamestuff").className = "flexCol";
+//     document.getElementById("start").className = "locked";
     
-    currPlayer = players[currPlayerIndex];
-    round = 1;
+//     currPlayer = players[currPlayerIndex];
+//     round = 1;
 
-    document.getElementById("roundnum").innerHTML = round;
-    document.getElementById("currplayer").innerHTML = currPlayer;
-}
+//     document.getElementById("roundnum").innerHTML = round;
+//     document.getElementById("currplayer").innerHTML = currPlayer;
+// }
 
-let playerInput = "";
-let story = "";
-let storyArr = [];
-let lastWord = "";
-function nextPlayer() {
-    // if input > 280 characters or input is empty, do not submit
-    if (document.getElementById("passage").value == "" || document.getElementById("passage").value.length > 280) return;
-
-
-    // add player input to story
-    playerInput = document.getElementById("passage").value;
-    story += " " + playerInput;
-    let playerInputArr = playerInput.split(" ")
-    for (let i = 0; i < playerInputArr.length; i++) {
-        storyArr.push(playerInputArr[i]);
-    }
-    document.getElementById("storyText").innerHTML = story;
-
-    // change last word
-    lastWord = storyArr[storyArr.length - 1];
-    document.getElementById("last-word").innerHTML = lastWord;
-
-    // clear input box
-    document.getElementById("passage").value = "";
-
-    // next player
-    currPlayerIndex++;
-    if (currPlayerIndex == players.length) {
-        if (round == 5) {
-            document.getElementById("gamestuff").className = "locked";
-            document.getElementById("story").className = "flexCol";
-            return;
-        } else {
-            currPlayerIndex = 0;
-            round++;
-            document.getElementById("roundnum").innerHTML = round;
-        }
-    }
-
-    currPlayer = players[currPlayerIndex];
-    document.getElementById("currplayer").innerHTML = currPlayer;
-}
+// let playerInput = "";
+// let story = "";
+// let storyArr = [];
+// let lastWord = "";
+// function nextPlayer() {
+//     // if input > 280 characters or input is empty, do not submit
+//     if (document.getElementById("passage").value == "" || document.getElementById("passage").value.length > 280) return;
 
 
+//     // add player input to story
+//     playerInput = document.getElementById("passage").value;
+//     story += " " + playerInput;
+//     let playerInputArr = playerInput.split(" ")
+//     for (let i = 0; i < playerInputArr.length; i++) {
+//         storyArr.push(playerInputArr[i]);
+//     }
+//     document.getElementById("storyText").innerHTML = story;
 
-// game stuff (works for everyone)
+//     // change last word
+//     lastWord = storyArr[storyArr.length - 1];
+//     document.getElementById("last-word").innerHTML = lastWord;
+
+//     // clear input box
+//     document.getElementById("passage").value = "";
+
+//     // next player
+//     currPlayerIndex++;
+//     if (currPlayerIndex == players.length) {
+//         if (round == 5) {
+//             document.getElementById("gamestuff").className = "locked";
+//             document.getElementById("story").className = "flexCol";
+//             return;
+//         } else {
+//             currPlayerIndex = 0;
+//             round++;
+//             document.getElementById("roundnum").innerHTML = round;
+//         }
+//     }
+
+//     currPlayer = players[currPlayerIndex];
+//     document.getElementById("currplayer").innerHTML = currPlayer;
+// }

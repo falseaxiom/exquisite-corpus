@@ -32,7 +32,7 @@
             <div id="gamestuff" class="locked">
                 <span class="subtitle" style="color: white; margin-top: 0px; margin-bottom: 0px;">round: <span id="roundnum">_</span> of 5</span>
                 <span class="subtitle" style="color: white; margin-top: 0px; margin-bottom: 0px;">current player: <span id="currplayer">_____</span></span>
-                <div id="notyourturn" class="locked"></div>
+                <div id="notyourturn" class="locked" style="color: white; margin-top: 50px;">chat with everyone while you wait for your turn! :~)</div>
                 <div id="currplayerstuff" class="flexCol">
                     <div id="last-word-box"><span class="desc"><span id="last-word">-----</span></span></div>
                     <textarea rows="5" id="passage" placeholder="type your masterpiece here!" onkeyup="countChar(this)"></textarea>
@@ -60,4 +60,14 @@
     <script src="http://code.jquery.com/jquery-1.5.js"></script>
     <script src="agoraRtc.js"></script>
     <script src="agoraMessaging.js"></script>
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener("beforeunload", function (e) {
+            channel.logout();
+            gameChannel.logout();
+            client.leave(function(){
+                console.log("Left!");
+            },handlefail);
+        });
+    </script>
 </html>
