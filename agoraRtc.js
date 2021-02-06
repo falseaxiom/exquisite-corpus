@@ -26,7 +26,7 @@ function countChar() {
     if (len >= 10000) {
         val.value = val.value.substring(50, 10000);
     } else {
-        $('#charNum').text(len);
+        document.getElementById("charNum").innerHTML = len;
     }
     if(len > 280){
         document.getElementById("charNum").style.color = "red";
